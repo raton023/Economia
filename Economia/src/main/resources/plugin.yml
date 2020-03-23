@@ -1,0 +1,27 @@
+main: brouse13.economia.Main
+version: 1.0
+name: Economia
+author: Brouse_13
+depend:
+  - Vault
+commands:
+  zpuntos:
+    description: Información de tus zpuntos
+    aliases:
+      - zp
+  zpuntosset:
+    description: Da zpuntos a judadores
+    aliases:
+      - zpset
+  zpuntostop:
+    description: Muestra una lista de los zpuntos de todos los jugadores
+    aliases:
+      - zptop
+  zpuntosgive:
+    description: Da zpuntos a un jugador
+    aliases:
+      - zpgive
+  zpuntostake:
+    description: Quita zpuntos a un jugador
+    aliases:
+      - zptake
