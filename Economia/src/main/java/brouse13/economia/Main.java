@@ -12,12 +12,13 @@ import java.io.InputStreamReader;
 
 
 public class Main extends JavaPlugin{
-    public Mysql mysql = new Mysql(this);
+    public Mysql mysql;
 
     @Override
     public void onEnable() {
         if(!getDataFolder().exists()){createConfig();}
         if(getConfig().getBoolean("enabled")==false){Bukkit.getPluginManager().disablePlugin(this);return;}
+        mysql = new Mysql(this);
         mysql.IniciarMysql();
         Bukkit.getPluginManager().registerEvents(new LoginPlayerEvt(this),this);
         this.getCommand("zpuntos").setExecutor(new ZpuntosCmd(this));
